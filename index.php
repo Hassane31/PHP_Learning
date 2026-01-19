@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php 
-echo 'welcome';
-echo '<br>'
-?>
+<?php
 
-<?='<h1>hello world';?>
-</body>
-</html>
+//single line comment 
+#single line comment 
+/*
+Line 1
+Line 2
+*/
+echo 'hello php';
+
+
+/*
+=======================
+== MY Special App======
+=======================
+*/
