@@ -1,18 +1,43 @@
 <?php
-//String And Escaping
+//Heredoc And Nowdoc
+
+
+
+$name = "hassane"; 
+echo <<<"Here"
+hello PHP
+Special characters $$$ ''' """" \\\
+hello my name is $name
+Here;
 echo '<br>';
-echo'hello PHP';
 echo '<br>';
-echo"hello 'PHP'";
+
+
+//Nowdoc
+echo <<< 'now'
+hello PHP
+speacial characters $$$ ''' """" \\\\
+Hello my name is $name
+now;
+
 echo '<br>';
-echo'hello "PHP"';
+
+echo '<ul>';
+echo '<li>'.$name . '</li>';
+echo '<li>'.$name . '</li>';
+echo '<li>'.$name . '</li>';
+echo '<li>'.$name . '</li>';
+echo '</ul>';
 echo '<br>';
-echo'hello \'PHP\'';
+echo <<< "navlinks"
+<ul>
+<li>$name </li>
+<li>$name </li>
+<li>$name </li>
+<li>$name </li>
+</ul>
+navlinks;
 echo '<br>';
-echo'hello PHP\\';
+
 echo '<br>';
-echo '<br>';
-echo nl2br('hello PHP
-new line 
-laabane hassane');
-echo '<br>';
+
