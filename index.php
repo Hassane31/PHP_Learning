@@ -1,11 +1,10 @@
 <?php
-echo gettype(true);
+//automatic type converteur
+echo gettype(1+ '1'); //intger
 echo '<br>';
-echo gettype(trUe);
+echo gettype(true + true ); //intger
 echo '<br>';
-echo gettype(123);
+echo 5+'5 lesson ';//warning 
 echo '<br>';
-echo gettype("hahaha");
-echo '<br>';
-echo gettype(array("DZ" => "algeria","FR"=>"franch"));
+echo gettype(10 + 15.5); //doubel 
 echo '<br>';
