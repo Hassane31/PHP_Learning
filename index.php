@@ -1,10 +1,6 @@
 <?php
-//automatic type converteur
-echo gettype(1+ '1'); //intger
+//casting 
+echo 5 + (int) '5 lesson';
 echo '<br>';
-echo gettype(true + true ); //intger
-echo '<br>';
-echo 5+'5 lesson ';//warning 
-echo '<br>';
-echo gettype(10 + 15.5); //doubel 
-echo '<br>';
+echo 5 + (int) 15.5;
+echo gettype( 5 + (int) 15.5);
