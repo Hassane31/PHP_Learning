@@ -1,11 +1,13 @@
 <?php
-//casting 
-echo 5 + (int) '5 lesson';
-echo '<br>';
-echo 5 + (int) 15.5;
-echo '<br>';
-echo gettype( 5 + (int) 15.5);
-echo '<br>';
-echo (int)(10.5 + 10.5);
-echo '<br>';
-echo gettype((int)(10.5 + 10.5));
+//Boolean And Converting To Boolean
+var_dump((bool) '');
+echo'<br>';
+var_dump((bool) array());
+echo'<br>';
+var_dump((bool) []);
+echo'<br>';
+var_dump((bool) "hassene");
+echo'<br>';
+var_dump((bool) array(1));
+echo'<br>';
+var_dump((bool) [1]);
