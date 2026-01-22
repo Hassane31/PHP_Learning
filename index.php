@@ -1,28 +1,31 @@
 <?php
-//variable variable
+//Assign By Value And By Reference
 
 $a = 'hassane';
+$b = &$a ;
+$b = "younes";
+
 echo $a;
 echo '<br>';
-echo $$a = 'mhmd';
+echo $b ;
 echo '<br>';
-echo $$a;
-echo '<br>';
-echo $hassane;
-//display 
-/* 
-hassane
-mhmd
-mhmd
-mhmd
+
+/*display 
+
+younes
+younes
+
 */
-$$$a = 'school';
-echo '<br>';
-echo $mhmd;
-echo '<br>';
-echo "hello ${$a}"; //$$a
-echo '<br>';
-echo "hello ${$$a}"; //$$$a
+$a = 'howari ';
 
-
+echo $a;
 echo '<br>';
+echo $b ;
+echo '<br>';
+
+/*display 
+
+howari
+howari
+
+*/
