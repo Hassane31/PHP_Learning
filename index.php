@@ -1,14 +1,28 @@
-<?php $username = "hassane"?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my page <?php echo $username ?></title>
-</head>
-<body>
-    <div>hi my name is <?php echo $username ?></div>
-    <div>your score is 1000 points</div>
-    <div>score for <?php include("score.php");?></div>
-</body>
-</html>
+<?php
+//variable variable
+
+$a = 'hassane';
+echo $a;
+echo '<br>';
+echo $$a = 'mhmd';
+echo '<br>';
+echo $$a;
+echo '<br>';
+echo $hassane;
+//display 
+/* 
+hassane
+mhmd
+mhmd
+mhmd
+*/
+$$$a = 'school';
+echo '<br>';
+echo $mhmd;
+echo '<br>';
+echo "hello ${$a}"; //$$a
+echo '<br>';
+echo "hello ${$$a}"; //$$$a
+
+
+echo '<br>';
