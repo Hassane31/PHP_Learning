@@ -1,31 +1,12 @@
 <?php
-//Assign By Value And By Reference
-
-$a = 'hassane';
-$b = &$a ;
-$b = "younes";
-
-echo $a;
-echo '<br>';
-echo $b ;
-echo '<br>';
-
-/*display 
-
-younes
-younes
-
-*/
-$a = 'howari ';
-
-echo $a;
-echo '<br>';
-echo $b ;
-echo '<br>';
-
-/*display 
-
-howari
-howari
-
-*/
+//Predefined Variables And Test
+//echo '<pre>';
+//print_r($_SERVER);
+//echo $_SERVER["HTTP_CONNECTION"];
+//echo '</pre>';
+echo $_GET["username"];
+?>
+<form action="" method="get" >
+<input type="text" name="username">
+<input type="submit" value= "Send">
+</form>
