@@ -1,32 +1,20 @@
-<?php
-//Predefined And Magic Constants And Reserved Keywords
+<?php 
+//Arithmetic Operators
 
-echo php_uname();  //show OS information
+echo 10+20;
+echo'<br>';
+echo gettype(20 + 10 );
+echo'<br>';
+//same logic with any other langage
 
-echo '<br>';
-echo PHP_VERSION;//show version php
-echo '<br>';
-echo PHP_OS_FAMILY; //os
-echo '<br>';
-echo PHP_INT_MAX; // max integer
-echo '<br>';
-echo DEFAULT_INCLUDE_PATH;//show pTH of file php {/opt/lampp}
-echo '<br>';
-echo __FILE__;//project file 
-echo '<br>';
-echo __LINE__;
-echo '<br>';
-//list of reserved words (exemple :BREAK)
-echo '<br>';
 
-//no problem here 
-function hello(){
-    return 'hello';
-}
-echo hello ();
-
-//reserved word 
-function clone(){
-    return 'clone';
-}
-echo clone();
+echo'<br>';
+echo 21 % 10 ; //the rst of div
+echo'<br>';
+echo 4**2;//power  
+echo'<br>';
+echo gettype("100");//string
+echo'<br>';
+echo gettype(+"100");//intger
+echo'<br>';
+echo'<br>';
