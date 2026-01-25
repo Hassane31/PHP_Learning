@@ -1,23 +1,43 @@
-<?php 
-//logical Operators 
+<?php
+//String Operators
 
-/*
-&&  =>  and 
-||  =>  or 
-xor =>  Xor 
-!   =>  Not
-*/
+define('ELZERO', '1');
 
-var_dump(100 > 50 and 20 =='20');//true
+
+$a = 'hassane';
+$b = 'mhmd';
+$c = 'yns';
+
+echo "$a $b $c "; //hassane mhmd yns
 echo '<br>';
-var_dump(100 > 50 && 20 =='220');//false
+echo "{$a} {$b} {$c} ";//hassane mhmd yns
 echo '<br>';
-var_dump(100 > 50 or 20 =='20');//true
+echo $a ." ". $b. " ". $c ;//hassane mhmd yns
 echo '<br>';
-var_dump(100 > 50 || 20 =='210');//true
+echo "{$a} {$b} {$c} ".ELZERO .testing() ;//11 
+
+function testing (){
+    return 1 ;
+}
+
 echo '<br>';
-var_dump(100 > 50 xor 20 =='210');//true
+
+//concatinat 
+
+$x = 'hassane ';
+echo $x ;
+
+$x .= ' mhmd';
 echo '<br>';
-var_dump(100 > 50 xor 20 =='20');//false
+echo $x ;
+
+$x .= ' yns';
 echo '<br>';
-  
+echo $x ;
+
+//display hassane
+//hassane
+//hassane mhmd
+//hassane mhmd yns
+
+echo '<br>';
