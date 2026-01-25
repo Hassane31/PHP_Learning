@@ -1,43 +1,23 @@
-<?php
-//String Operators
+<?php 
+//array operators 
 
-define('ELZERO', '1');
+$arr1 =[1 => "A",2 => "b",3 => "C",];
+$arr2 =[4 => "D",5 => "E",6 => "F",];
 
+echo '<pre>';
+print_r ($arr1 + $arr2) ;
+echo '</pre>';
 
-$a = 'hassane';
-$b = 'mhmd';
-$c = 'yns';
+$arr4 = [1 => "10",2 => "20"];
+$arr5 = [2 => 20,1 => 10];
 
-echo "$a $b $c "; //hassane mhmd yns
+var_dump($arr4 == $arr5 );//true 
 echo '<br>';
-echo "{$a} {$b} {$c} ";//hassane mhmd yns
-echo '<br>';
-echo $a ." ". $b. " ". $c ;//hassane mhmd yns
-echo '<br>';
-echo "{$a} {$b} {$c} ".ELZERO .testing() ;//11 
+var_dump($arr4 <> $arr5 );//false 
 
-function testing (){
-    return 1 ;
-}
 
 echo '<br>';
+$arr6 = [1 => 10,2 => 20];
+$arr7 = [1 => 10,2 => 20];
 
-//concatinat 
-
-$x = 'hassane ';
-echo $x ;
-
-$x .= ' mhmd';
-echo '<br>';
-echo $x ;
-
-$x .= ' yns';
-echo '<br>';
-echo $x ;
-
-//display hassane
-//hassane
-//hassane mhmd
-//hassane mhmd yns
-
-echo '<br>';
+var_dump($arr6 === $arr7);//
