@@ -1,28 +1,24 @@
 <?php 
-//Comparison Operators - Part 2
+//Increment And Decrement Operators
+$like = 0;
+$like++;
+$like++;
+$like++;
+$like++;
+$like--;
+echo $like ;
+$like--;
+$like--;
+$like--;
+$like--;
+echo '<br>';
+echo $like ;
 
 
-var_dump(100 <= 100 );//true
 echo '<br>';
-var_dump(100 >= "100");//true
+$a =0 ;
+echo $a++; //0
 echo '<br>';
+echo $a ; //1
 
-
-
-
-echo '################'; 
-echo '<br>';
-var_dump (100 > "100");//false
-echo '<br>';
-var_dump (100 < "100");//false  
-echo '<br>';
-
-
-echo '################';
-echo '<br>';
-var_dump(100<=>200); //-1
-echo '<br>';
-var_dump(200<=>200);//0
-echo '<br>';
-var_dump(100<=>50);//1
 
