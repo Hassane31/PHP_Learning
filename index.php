@@ -1,23 +1,16 @@
-<?php 
-//array operators 
+<?php
+//Error Control Operator
 
-$arr1 =[1 => "A",2 => "b",3 => "C",];
-$arr2 =[4 => "D",5 => "E",6 => "F",];
+$a = 10 ;
+$b = @$a or die("var not found !!") ;
+echo $b ;
 
+//File
+echo '<br>';
+$f = @file("file.txt") or die("File not found !!");
 echo '<pre>';
-print_r ($arr1 + $arr2) ;
+print_r($f);
 echo '</pre>';
 
-$arr4 = [1 => "10",2 => "20"];
-$arr5 = [2 => 20,1 => 10];
-
-var_dump($arr4 == $arr5 );//true 
-echo '<br>';
-var_dump($arr4 <> $arr5 );//false 
-
-
-echo '<br>';
-$arr6 = [1 => 10,2 => 20];
-$arr7 = [1 => 10,2 => 20];
-
-var_dump($arr6 === $arr7);//
+//include 
+(@include("hassane.php")) or die("file not Found");
