@@ -1,33 +1,33 @@
 <?php 
-//If, Elseif, Else - Basics -REAL LIFE EXAMPlEs
 
-$page = "about";
+if($_SERVER["REQUEST_METHOD"]==="POST"){
+    if($_POST["lang"]=="ar"){
+      header("Location: ar.php");
+      exit();
+    }
+     elseif($_POST["lang"]=="en"){
+      header("Location: en.php");
+      exit();
+    }
+}
+?>
 
-if($page == "about"){
-    echo "this is About page ";
-}
-echo '<br>';
-
-$title = "Home";
- 
-if ($title == "Home"){
-    echo "<h1>Home Page</h1>";
-}
-elseif($title == "") {
-    echo "<h1>Unknown Page</h1>";
-}
-
-echo '<br>';
-$lang = "Arabic";
-if ($lang == "Arabic"){
-    echo 'mar7ba';
-}
-elseif($lang == "English"){
-    echo "hello ";
-}
-elseif($lang == "Spanish"){
-    echo "hola";
-}
-else {
-    echo "Unknown Language !!!";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="username" id="">
+        <select name="lang" id="">
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+            <option value="sp">Spanish</option>
+        </select>
+        <input type="submit" value="Go">
+    </form>
+</body>
+</html>
