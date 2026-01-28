@@ -1,21 +1,27 @@
 <?php
-//Switch 
+//While loop And concept of loop 
+
+// echo'1<br>';
+// echo'2<br>';
+// echo'3<br>';
+// echo'4<br>';
+// echo'5<br>';
+// echo'6<br>';
+// echo'7<br>';
+// echo'8<br>';
 
 
-$day = "sat";
+$i = 0 ;
 
-switch($day){
-    case "sat" :
-      echo "Hello to day is $day we are open From 10:20 am";
-      break; 
-    case "sun":
-    case "mon":
-    case "thus":
-    case "wed":
-      echo "Hello to day is $day we are open From 8:00 am";
-      break;
-    case "thar" :
-      echo "Hello to day is $day we are open From 10:00 am";
-    break;
-default : echo "Unknown day !!! ";
+while($i<= 3){
+echo"$i<br>";
+$i++;
 }
+
+//another syntax 
+$a = 0 ;
+
+while($a<= 3):
+echo"$a<br>";
+$a++;
+endwhile;
