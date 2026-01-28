@@ -1,27 +1,38 @@
 <?php
-//While loop And concept of loop 
+//Do while and for Loop
 
-// echo'1<br>';
-// echo'2<br>';
-// echo'3<br>';
-// echo'4<br>';
-// echo'5<br>';
-// echo'6<br>';
-// echo'7<br>';
-// echo'8<br>';
+//Do while
+$a = 0;
+  do {
+    echo"$a<br>";
+    $a++;
+    }
+    while($a<= 3);
 
 
-$i = 0 ;
+//For loop
+  echo"<br>";
+echo 'for loop ';
+  echo"<br>";
 
-while($i<= 3){
-echo"$i<br>";
-$i++;
+for($i=0;$i<10;$i++){
+  echo"$i<br>";
 }
+ echo"$i<br>";
+echo 'another syntax ';
+ 
+$index=0 ;
+for(;;){
+if($index ==4){
+  break ;
+}
+echo "$index <br>";
+$index++;
 
-//another syntax 
-$a = 0 ;
-
-while($a<= 3):
-echo"$a<br>";
-$a++;
-endwhile;
+}
+//alternate syntax
+ echo"<br>alternate syntax<br>";
+for($i=0;$i<10;$i++):
+  echo"$i<br>";
+endfor;
+ echo"<br>";
