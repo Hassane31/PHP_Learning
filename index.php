@@ -1,49 +1,20 @@
-<?php
+<?php 
+//ternary conditional operator 
+$a = 2;
+$feeling = $a ;
+$result = $a ;
 
-//Nested if And advanced practice
-$name = "ousama";
-$is_student = true ;
-$is_orphan  = true ;
-$country = "egypet";
-$country_discount = 50 ;
-$price = 100 ;
-$student_discount = 10;
-$orphan_discount = 15 ;
+//echo $a == 3 ? "good" :"bed";
+
+echo "<br>";
+
+echo "I ".($a>10 ? "love":"hate")." Php because its a ".($a>10 ? "good":"bed")." languge";
+
+echo "<br>";
 
 
-if($country){
+$feeling = $a > 10 ? "love":"hate";
+$result  = $a > 10 ? "good":"bed";
 
-  if($is_student){
-     
-    if ($is_orphan){
-    echo "hello $name";
-    echo'<br>';
-    echo "this account have country discount : $country_discount 
-    <br>And student discount : $student_discount
-    <br>And orphan discount : $orphan_discount";
-    
-    echo "<br>the finel price is :" .$price - $country_discount- $student_discount-$orphan_discount. "Dzd";  
-    }
-    else {
-         echo "hello $name";
-    echo'<br>';
-    echo "this account have country discount : $country_discount 
-    <br>And student discount : $student_discount";
-    echo "<br>the finel price is :" .$price - $country_discount-$student_discount. "Dzd";
-    }
+echo "I ".$feeling." Php because its a ".$result." languge";
 
-  }
-  else{
-    echo "hello $name";
-    echo'<br>';
-    echo "this account have jast country discount : $country_discount ";
-    echo "<br>the finel price is :" .$price - $country_discount . "Dzd";
-  }
-
-}
-else{
-    echo "hello $name";
-    echo'<br>';
-    echo "this account have no discount";
-    echo "<br>the finel price is : $price";
-}
