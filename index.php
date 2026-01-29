@@ -1,38 +1,22 @@
-<?php
-//Do while and for Loop
+<?php 
+//FOREACH LOOP 
 
-//Do while
-$a = 0;
-  do {
-    echo"$a<br>";
-    $a++;
-    }
-    while($a<= 3);
+$countries = ["EG","DZ","FR","USD","UK","USK"];
+echo'<pre>';
+print_r($countries);
+echo'</pre>';
 
-
-//For loop
-  echo"<br>";
-echo 'for loop ';
-  echo"<br>";
-
-for($i=0;$i<10;$i++){
-  echo"$i<br>";
+//foreach($array as $value){ }
+foreach($countries as $country){
+echo $country.'<br>';
 }
- echo"$i<br>";
-echo 'another syntax ';
- 
-$index=0 ;
-for(;;){
-if($index ==4){
-  break ;
-}
-echo "$index <br>";
-$index++;
 
-}
-//alternate syntax
- echo"<br>alternate syntax<br>";
-for($i=0;$i<10;$i++):
-  echo"$i<br>";
-endfor;
- echo"<br>";
+//foreach($array as $key => $value){  }
+$countries_with_discount = ["EG"=>50,"DZ"=>100,"FR"=>20,"USD"=>30,"UK"=>23,"USK"=>11];
+echo '<pre>';
+print_r($countries_with_discount);
+echo '</pre>';
+
+foreach($countries_with_discount as $country => $discount):
+  echo $country ."-------->" .$discount ."<br>";
+endforeach ;
