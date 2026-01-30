@@ -1,14 +1,22 @@
-<?php 
-//function return and echo 
+<?php
+//Function Default parameter value
 
-$prizes=["PC","playstation","XBOX","Appel","TV","laptop","ipad","iphone"];
+// function get_data($name,$country,$age,$adress){
+//     if($adress == ""){
+//       $adress = "Private adress ";
+//     }
+//     $line1 = "hello im $name from $country <br>";
+//     $line2 = "im $age i live in $adress";
+//      return $line1.$line2;
+// }
+// echo get_data("iness","algeria","22","");
 
-function get_num($num1,$num2){
-    return $num1 + $num2 ;
-    echo 'will not echo anything';
+function get_data($name,$country,$age=20,$adress="Private Adress"){
+    if($adress == ""){
+      $adress = "Private adress ";
     }
-// get_num(1,2);//3
-// $prizes[3];
- echo '<br>';
-$prize_number = get_num(1,2);
-echo $prizes[$prize_number];
+    $line1 = "hello im $name from $country <br>";
+    $line2 = "im $age i live in $adress";
+     return $line1.$line2;
+}
+echo get_data("iness","algeria",adress:"oran");//if u want to fill jast last argemant
