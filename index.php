@@ -1,31 +1,19 @@
 <?php
-//Break , continue 
+include And require 
 
-$countries = ["EG","DZ","FR","USA","UK","USK"];
+//include 
+include("aas,ld,asda.php");//$a = 10;  still work 
+echo "$a<br>";
+
+//require 
+require("a.php");
+echo "$a<br>";
+echo "continue";
 
 
-foreach($countries as $country){
-// if u dont want USA with...
-// if($country == "USA"){
-//   break ;
-// }
-echo $country."<br>";
+include_once("a.php");
+echo "$a<br>";
+$a=20;
 
-if($country == "USA"){
-  break ;
-   }
-
-}
-
-echo "###################<br>";
-foreach($countries as $country){
-// if u dont want USA with...
-// if($country == "USA"){
-//   break ;
-// }
-echo $country."<br>";
-if($country == "USA"){
-  continue;
-   }
-
-}
+include_once("a.php");
+echo "$a<br>";
