@@ -1,21 +1,34 @@
 <?php
-//Function introduction and DRY concept 
+//Advanced Examples With Parameters And Arguments
 
 
-echo 'hello hassane<br>';
-echo 'hello hayza<br>';
-echo 'hello iness<br>';
-echo 'hello yns<br>';
 
-echo '<br>#############<br>';
 
-function say_hello($someone){
-    echo "hello sir $someone<br>";
+function say_hello($one,$two){
+    echo "hello sir $one and $two<br>";
 
 }
 
+say_hello("hassane","iness");
 
-say_hello("Iness"); 
-say_hello("hassane"); 
-say_hello("hyza"); 
-say_hello("Iness"); 
+
+function deep_frez($item){
+    if($item == "water"){
+        echo "make ace <br>";
+    }
+
+    elseif($item == "cola"){
+        echo "make cold <br>";
+    }
+
+    elseif($item == "fruits"){
+        echo "make fresh <br>";
+    }
+    else{
+        echo "unknown item <br>";
+    }
+}
+
+deep_frez("fruits");
+deep_frez("cola");
+deep_frez("water");
