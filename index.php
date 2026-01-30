@@ -1,19 +1,21 @@
 <?php
-include And require 
-
-//include 
-include("aas,ld,asda.php");//$a = 10;  still work 
-echo "$a<br>";
-
-//require 
-require("a.php");
-echo "$a<br>";
-echo "continue";
+//Function introduction and DRY concept 
 
 
-include_once("a.php");
-echo "$a<br>";
-$a=20;
+echo 'hello hassane<br>';
+echo 'hello hayza<br>';
+echo 'hello iness<br>';
+echo 'hello yns<br>';
 
-include_once("a.php");
-echo "$a<br>";
+echo '<br>#############<br>';
+
+function say_hello($someone){
+    echo "hello sir $someone<br>";
+
+}
+
+
+say_hello("Iness"); 
+say_hello("hassane"); 
+say_hello("hyza"); 
+say_hello("Iness"); 
