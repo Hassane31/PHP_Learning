@@ -1,15 +1,59 @@
 <?php
-echo lcfirst("Hassane HH<br>");//lower Case the first caracter 
-echo lcfirst("hassane hh");//lower Case the first caracter 
+////string functions part 2 
+$friends = ["hassane","mhmd","iness","yns"]; 
+echo implode(" ",$friends)."<br>";
+echo implode("< ",$friends)."<br>";
+echo implode("@@",$friends)."<br>";
+echo implode($friends)."<br>";
 
-echo strtolower("HASSANE LAABANE");//hassane laabane
-echo strtoupper("hassane laabane");//HASSANE LAABANE
+$str = "I hate laabane hassane";
+echo "<pre>";
+print_r(explode(" ", $str));
+echo "</pre><br>";
+//display 
+//     [0] => I
+//     [1] => hate
+//     [2] => laabane
+//     [3] => hassane
 
-echo ucwords("iness iness");//Iness Iness
-echo ucwords("iness iness | iness ","|");//Iness iness | iness
+echo "<pre>";
+print_r(explode("l", $str));
+echo "</pre>";
 
-echo str_repeat("hassane ",3);//hassane hassane hassaneg
+//dislay 
+//     [0] => I hate 
+//     [1] => aabane hassane
 
+echo "<pre>";
+print_r(explode(" ", $str,3));
+echo "</pre>";
 
+// display 
+//     [0] => I
+//     [1] => hate
+//     [2] => laabane hassane
 
+echo "<pre>";
+print_r(explode(" ", $str,-2));
+echo "</pre><br>";
 
+// display 
+//     [0] => I
+//     [1] => hate
+
+echo str_shuffle("Hassane")."<br>";
+echo strrev("Hassane")."<br>";
+
+echo strlen("    hassane    ");// 15
+echo "<br>";
+echo strlen(trim("    hassane    "));// 7 
+echo "<br>";
+echo trim("###hassane##","#");//hassane
+echo "<br>";
+echo trim("###hassane##","#@");//same with 
+echo "<br>";
+echo trim("#@@@##hassane#@#","@");//no changes  
+echo "<br>";
+echo rtrim("###hassane##","#");//###hassane
+echo "<br>";
+echo ltrim("###hassane##","#");//hassane##
