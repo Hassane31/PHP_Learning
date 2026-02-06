@@ -1,16 +1,15 @@
 <?php
-//String access And update elements
-$str = "HassaneLaabane";
+echo lcfirst("Hassane HH<br>");//lower Case the first caracter 
+echo lcfirst("hassane hh");//lower Case the first caracter 
 
-echo $str[0];//H
-echo $str[3];//s
-echo $str[7];//3
-echo '<br>';
-echo "Nbr of letters is ".strlen($str);
-echo '<br>';
-echo "Last letter is $str[-1]";//e
-echo '<br>';
-echo "Last letter is {$str[strlen($str)-1]}";//e
+echo strtolower("HASSANE LAABANE");//hassane laabane
+echo strtoupper("hassane laabane");//HASSANE LAABANE
 
-$str[16]="I";//index dosnt exists 
-echo $str;//" HassaneLaabane I "
+echo ucwords("iness iness");//Iness Iness
+echo ucwords("iness iness | iness ","|");//Iness iness | iness
+
+echo str_repeat("hassane ",3);//hassane hassane hassaneg
+
+
+
+
