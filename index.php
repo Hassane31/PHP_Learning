@@ -1,28 +1,57 @@
 <?php
-//built in String Functions - Part 4 
+//built in String Functions - Part 5
 
-//strpos(string,search string,string index start)
-var_dump(strpos("hello world","w",6));//int(6) or //bool(false) 
-echo '<br>';
+parse_str("name=Hassane&Email=hassane@gmail&OS=linux",$query);
+                                        
+echo '<pre>';
+print_r($query);
+echo '</pre>';
 
-var_dump(stripos("hello world","w"));//int(6)
-echo '<br>';
+//     [name] => Hassane
+//     [Email] => hassane@gmail
+//     [OS] => linux
 
-var_dump(strpos("hello world","H",-2));//bool(false) 
-echo '<br>';
+echo "hello () [] * + . <br>";
+echo quotemeta("hello () [] * + . <br>"); //skipping any cc has problem 
+echo "<br>";
+echo $query["name"]."<br>";
+echo $query["Email"]."<br>";
+echo $query["OS"]."<br>";
+echo "<br>";
+echo "<br>";
 
-var_dump(strpos("hello world","l",-2));//int(9)
-echo '<br>';
+echo str_pad("123",8,0)."<br>";
+echo str_pad("1234",8,0)."<br>";
+echo str_pad("12345",8,0)."<br>";
+echo str_pad("123456",8,0)."<br>";
+echo str_pad("1234567",8,0)."<br>";
 
-var_dump(strrpos("hello world","l"));//int(9) //the last 'l' in the string 
-echo '<br>';
+// 12300000
+// 12340000
+// 12345000
+// 12345600
+// 12345670
+echo "<br>";echo "<br>";
 
-var_dump(substr_count("Hello Hello","He",1/**start string*/));// int(1)
-echo '<br>';
+echo str_pad("123",8,0,STR_PAD_BOTH)."<br>";
+echo str_pad("1234",8,0,STR_PAD_BOTH)."<br>";
+echo str_pad("12345",8,0,STR_PAD_LEFT)."<br>";
+echo str_pad("123456",8,0,STR_PAD_LEFT)."<br>";
+echo str_pad("1234567",8,0,STR_PAD_LEFT)."<br>";
 
-var_dump(substr_count("Hello Hello","He",1,7/* H | ello Hel | lo */));// int(1)
-echo '<br>';
+// 00123000
+// 00123400
+// 00012345
+// 00123456
+// 01234567
 
-var_dump(substr_count("abcdabcd","abcda"));// int(1)
+echo "<br>";echo "<br>";
 
+echo strtr("La@bane H@ss@ne","@","a");// Laabane Hassane
+echo "<br>";echo "<br>";
+echo strtr("La@bane H@ss@ne","@","a");// Laabane Hassane
+echo "<br>";echo "<br>";
+
+$translation = ["@"=>"a","#"=>"s"];
+echo strtr("L@@b@ne H@##@ne",$translation);//Laabane Hassane
 
