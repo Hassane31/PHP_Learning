@@ -1,111 +1,71 @@
 <?php
-//Array functions part-1 
+//Array Functions part-2
 
-$friends = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir", "Shakil");
-
-echo '<pre>';
-print_r(array_chunk($friends,2));  
-echo '</pre>';
-
-// Array
-// (
-//     [0] => Array
-//         (
-//             [0] => Rafi
-//             [1] => Shuvo
-//         )
-
-//     [1] => Array
-//         (
-//             [0] => Sabbir
-//             [1] => Shakil
-//         )
-
-//     [2] => Array
-//         (
-//             [0] => Sabbir
-//             [1] => Shakil
-//         )
-
-// )
-
-$coutries = [
-    "Bangladesh" => "Dhaka",
-    "India" => "Delhi",
-    "Pakistan" => "Islamabad",
-    "Nepal" => "Kathmandu",
-    "Bhutan" => "Thimphu"
-];
-
-echo '<pre>';
-print_r(array_chunk($coutries,2,True));  
-echo '</pre>';
-
-// Array
-// (
-//     [0] => Array
-//         (
-//             [Bangladesh] => Dhaka
-//             [India] => Delhi
-//         )
-
-//     [1] => Array
-//         (
-//             [Pakistan] => Islamabad
-//             [Nepal] => Kathmandu
-//         )
-
-//     [2] => Array
-//         (
-//             [Bhutan] => Thimphu
-//         )
-
-// )
-
-echo '<pre>';
-print_r(array_change_key_case($coutries));  
-echo '</pre>';
-
-//     [bangladesh] => Dhaka
-//     [india] => Delhi
-//     [pakistan] => Islamabad
-//     [nepal] => Kathmandu
-//     [bhutan] => Thimphu
-
-echo '<pre>';
-print_r(array_change_key_case($coutries,CASE_UPPER));  
-echo '</pre>';
-
-//     [BANGLADESH] => Dhaka
-//     [INDIA] => Delhi
-//     [PAKISTAN] => Islamabad
-//     [NEPAL] => Kathmandu
-//     [BHUTAN] => Thimphu
-
-$keys = array("a", "b", "c", "d", "e");
-$values = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir");
+$familly = ["osama", "ahmed", "mohamed", ["iness", "mona"]];
 
 echo "<pre>";
-print_r(array_combine($keys,$values));  
+print_r($familly);
+print_r(array_reverse($familly, true));//true to preserve keys
 echo "</pre>";
 
-//     [a] => Rafi
-//     [b] => Shuvo
-//     [c] => Sabbir
-//     [d] => Shakil
-//     [e] => Sabbir
+// Array
+// (
+//     [3] => Array
+//         (
+//             [0] => iness
+//             [1] => mona
+//         )
+
+//     [2] => mohamed
+//     [1] => ahmed
+//     [0] => osama
+// )
 
 
-$counting = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir");
+$countries = [
+      "EG"=>"egypt",
+      "US"=>"united states",
+      "KSA"=>"saudi arabia",
+      "USA"=>"united states",
+      "SPAIN"=>"spain"];
 
-echo "<pre>";   
-print_r(array_count_values($counting));
+echo "<pre>";
+print_r($countries);
+print_r(array_flip($countries));
 echo "</pre>";
 
-    // [Rafi] => 1
-    // [Shuvo] => 1
-    // [Sabbir] => 2
-    // [Shakil] => 1
+    // [egypt] => EG
+    // [united states] => USA
+    // [saudi arabia] => KSA
+    // [spain] => SPAIN
+
+$counting = ["A","B","C",["d","e"]];
+echo "<br>";
+echo count($counting,1);// 4   if we use 1 or true it will count the nested array as well ["d","e"]
+echo "<br>";
+
+//in array() function
+//in_array(value,array,strict)  strict is optional and default is false 
+ 
+$search = ["1",2,3,4];
+
+if(in_array(1,$search,true)){//true to check type as well
+    echo "found";
+}else{
+    echo "not found";   }
 
 
+//array_key_exists(key,array)  check if the key exist in the array or not
+
+$keys = ["PHP"=>100,
+         "JS"=>200,
+         "HTML"=>300];
+       
+
+if(array_key_exists("PHP",$keys)){
+    echo "<br>key exist and the price is ".$keys["PHP"];
+}else{
+    echo "<br>key not exist";}
+
+    //key exist and the price is 100
     
