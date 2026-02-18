@@ -1,36 +1,111 @@
 <?php
-//String functions part 1
+//Array functions part-1 
 
-echo strstr("Hello world", "world"); //returns the part of the string starting from the first occurrence of "world"
-echo "<br>";
+$friends = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir", "Shakil");
 
-echo strstr("Hello world", "lo"); //lo world
-echo "<br>";
+echo '<pre>';
+print_r(array_chunk($friends,2));  
+echo '</pre>';
 
-echo strstr("Hello world", "lo",true); //hel
-echo "<br>";        
+// Array
+// (
+//     [0] => Array
+//         (
+//             [0] => Rafi
+//             [1] => Shuvo
+//         )
 
-echo strpos("Hello world", "world"); //returns the position of the first occurrence of "world"
-echo "<br>";        
+//     [1] => Array
+//         (
+//             [0] => Sabbir
+//             [1] => Shakil
+//         )
 
-var_dump(strstr("Hello world", "W")); //bool(false)echo "<br>";        
-echo stristr("Hello world", "LO"); //lo world
-echo "<br>";
+//     [2] => Array
+//         (
+//             [0] => Sabbir
+//             [1] => Shakil
+//         )
 
-echo var_dump(stristr("Hello world", "lo"));//string(8) "lo world"
-echo "<br>";
+// )
 
-echo 10_000_000;//10000000
-echo "<br>";
+$coutries = [
+    "Bangladesh" => "Dhaka",
+    "India" => "Delhi",
+    "Pakistan" => "Islamabad",
+    "Nepal" => "Kathmandu",
+    "Bhutan" => "Thimphu"
+];
 
-echo number_format(1000000000.23423423);//1,000,000,000
-echo "<br>";
-echo number_format(1000000000.23423423,3);//1,000,000,000.234 
+echo '<pre>';
+print_r(array_chunk($coutries,2,True));  
+echo '</pre>';
 
-echo "<br>";
-echo number_format(1000000000.23423423,3,"@");//1,000,000,000@234
+// Array
+// (
+//     [0] => Array
+//         (
+//             [Bangladesh] => Dhaka
+//             [India] => Delhi
+//         )
+
+//     [1] => Array
+//         (
+//             [Pakistan] => Islamabad
+//             [Nepal] => Kathmandu
+//         )
+
+//     [2] => Array
+//         (
+//             [Bhutan] => Thimphu
+//         )
+
+// )
+
+echo '<pre>';
+print_r(array_change_key_case($coutries));  
+echo '</pre>';
+
+//     [bangladesh] => Dhaka
+//     [india] => Delhi
+//     [pakistan] => Islamabad
+//     [nepal] => Kathmandu
+//     [bhutan] => Thimphu
+
+echo '<pre>';
+print_r(array_change_key_case($coutries,CASE_UPPER));  
+echo '</pre>';
+
+//     [BANGLADESH] => Dhaka
+//     [INDIA] => Delhi
+//     [PAKISTAN] => Islamabad
+//     [NEPAL] => Kathmandu
+//     [BHUTAN] => Thimphu
+
+$keys = array("a", "b", "c", "d", "e");
+$values = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir");
+
+echo "<pre>";
+print_r(array_combine($keys,$values));  
+echo "</pre>";
+
+//     [a] => Rafi
+//     [b] => Shuvo
+//     [c] => Sabbir
+//     [d] => Shakil
+//     [e] => Sabbir
 
 
-echo "<br>";
-echo number_format(1000000000.23423423,3,"@","A");//1A000A000A000@234
+$counting = array("Rafi", "Shuvo", "Sabbir", "Shakil", "Sabbir");
 
+echo "<pre>";   
+print_r(array_count_values($counting));
+echo "</pre>";
+
+    // [Rafi] => 1
+    // [Shuvo] => 1
+    // [Sabbir] => 2
+    // [Shakil] => 1
+
+
+    
